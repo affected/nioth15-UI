@@ -1,10 +1,32 @@
-<h3>List</h3>
+
 <div class="container-fluid">
+  <h3>List</h3>
     <div id="stage-2" class="row">
-      <div class="content-tile col-sm-6 col-md-4 dark-blue-bg" ng-repeat="radtemp in temperatures">            
+      <div class="content-tile col-sm-6 col-md-4 dark-blue-bg" ng-repeat="listdata in data">            
         <span id="temp-list" class="temp-list">
-            {{radtemp.temp}}          
+          Apartment name:  {{listdata.id}}          
         </span>
+        <span id="temp-list" class="temp-list">
+           Apartment name: {{listdata.apartmentName}}          
+        </span>
+        <span id="temp-list" class="temp-list">
+          Inside temperature: {{listdata.insideTemperature}}          
+        </span>        
+        <span id="temp-list" class="temp-list">
+          Is the inside temperature above, below or average: {{listdata.getInsideTemperatureComparison}}          
+        </span>
+        <span id="temp-list" class="temp-list">
+          Radiator temperature: {{listdata.radiatorTemperature}}          
+        </span>
+        <span id="temp-list" class="temp-list">
+          Is the radiator tempersture above, below or average: {{listdata.getRadiatorTemperatureComparison}}          
+        </span>
+        <span id="temp-list" class="temp-list">
+          emoticon: {{listdata.emoticon}}          
+        </span>   
+        <span id="temp-list" class="temp-list">
+           alert: {{listdata.alert}}          
+        </span>  
       </div>
   </div>
-</div>    
+</div>

@@ -1,9 +1,14 @@
  var tweetHeat = angular.module('tweetHeat', [
   'ngRoute',
   'tweetHeatControllers',
-  'chart.js'
+  'chart.js',
+  'ngResource'
 ]);
-
+tweetHeat.config(['$httpProvider', function($httpProvider) {
+        $httpProvider.defaults.useXDomain = true;
+        delete $httpProvider.defaults.headers.common['X-Requested-With'];
+    }
+]);
 tweetHeat.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
