@@ -10,23 +10,43 @@ tweetHeatControllers.controller('overviewCtrl', ['$scope', '$http', function($sc
 }]);
 
 tweetHeatControllers.controller('listCtrl', ['$scope', '$routeParams', '$http', function($scope, $routeParams, $http) {
+ 
  console.log("dbg:3.1");
- $http.get('dummydata/dummy_list.json?id='+ $routeParams.phoneId).success(function(data) {
-    console.log("dbg:3.2");
-    $scope.tempdata = data;
-    $scope.identification =  data.identification;
-    $scope.temperatures =  data.temperatures;  
-    }); 
+ //$http.get('dummydata/dummy_list.json?id='+ $routeParams.phoneId).success(function(data) {
+   
+    //$http.defaults.useXDomain = true;
+
+    //$scope.useHttp = function() {   
+    
+      //console.log("dbg:3.2");
+    
+      $http.get('http://10.20.4.77:8080/lists/').success(function(data) {   
+   
+        console.log("dbg:3.3");
+        
+        $scope.data = data;
+        
+        //console.log("dbg data: "+data[0].getInsideTemperatureComparison);
+        
+        //$scope.identification =  data.identification;
+        //$scope.temperatures =  data.temperatures;  
+        }); 
+    //}
 }]);
 
-tweetHeatControllers.controller('tenantCtrl', ['$scope', '$http', function($scope, $http) {
+tweetHeatControllers.controller('tenantCtrl', ['$scope', '$http', '$interval', function($scope, $http, $interval) {
  console.log("dbg:4.1");
+ 
+  //$interval(callAtInterval, 2000);
+ 
  $http.get('dummydata/dummy_tenant.json').success(function(data) {
     console.log("dbg:4.2");
     $scope.data = data;
     });  
 }]);
-
+function callAtInterval() {
+    console.log("Interval occurred");
+}
 tweetHeatControllers.controller('graphCtrl', ['$scope', function($scope) {
   
  console.log("dbg:5.1");
