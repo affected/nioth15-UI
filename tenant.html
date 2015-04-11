@@ -17,14 +17,27 @@
       <p class="temp_val"><a class="tvalue" href="#/list/{{data.radiatortemperature.id}}">{{data.radiatortemperature.value}}</a>°</p>
       <span class="icon icon-icons_radiator"></span>
     </div>    
+    <div class="content-tile col-sm-6 col-md-4 dark-blue-bg text-center histo">
+      <div class="plus-button"><img src="images/plus_button.svg" alt=""></div>
+      <p class="temp text-uppercase hist">History</p>
+      <span></span>
+      <span class="icon icon-icons_history"></span>
+      <!--<a href="#/list/{{data.notifications.latest.id}}">Count: {{data.notifications.amount}} Latest {{data.notifications.latest.message}}</a>-->
+    </div>  
     <div class="content-tile col-sm-6 col-md-4 dark-blue-bg text-center">
-      <p class="temp text-uppercase">History</p>
-      <span class="icon icon-icons_history"
-      <!-- <a href="#/list/{{data.notifications.latest.id}}">Count: {{data.notifications.amount}} Latest {{data.notifications.latest.message}}</a>-->
-    </div>      
-    <div class="content-tile col-sm-6 col-md-4 dark-blue-bg">
-      <span>Weather</span>
-      <span>{{data.weather.message}}  {{data.weather.temperature}} C&deg;</span>
-    </div>      
+      <div class="plus-button"><img src="images/plus_button.svg" alt=""></div>
+      <p class="temp text-uppercase alert_text">Alerts</p>
+      <img src="images/alert_icon.svg" alt="">     
+    </div>     
+    <div class="content-tile col-sm-6 col-md-4 dark-blue-bg text-center">
+      <p class="temp text-uppercase">Weather</p>
+      <p><span class="tvalue weather">{{data.weather.message}}  {{data.weather.temperature}} C&deg;</span></p>
+      <span class="icon icon-icons_cloud"></span>
+    </div> 
+    <div class="content-tile col-sm-6 col-md-4 dark-blue-bg text-center building">
+      <div class="plus-button"><img src="images/plus_button.svg" alt=""></div>
+      <p class="temp text-uppercase hist">Building overview</p>
+      <span class="icon icon-icons_building"></span>
+    </div>          
   </div>
 </div>
