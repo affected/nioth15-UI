@@ -39,6 +39,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.ap_info{
+  background-color: #4b5d63;
+}
  p.ap{
   color: #6dc28c;
   font-size: 60px;
@@ -58,7 +62,16 @@
   color: #6dc28c;
  }
 
+ p.alert_text{
+  padding-bottom: 21px;
+ }
+
  /*ICONS*/
+ .rad_dark.icon-icons_radiator:before{
+  color:#000;
+  font-size: 81px;
+}
+
 .icon-icons_smiley1:before {
   content: "\e612";
   color: #6dc28c;
@@ -77,6 +90,169 @@
   font-size: 80px;
 }
 
+.icon-icons_history:before{
+  content: "\e615";
+  color: #6dc28c;
+  font-size: 80px;
+  padding-bottom: 26px;
+}
+
+.icon-icons_door:before{
+  content: "\e616";
+  color: #6dc28c;
+  font-size: 100px;
+}
+
+.icon-icons_cloud:before{
+  content: "\e617";
+  color: #6dc28c;
+  font-size: 80px;
+  padding-bottom: 26px; 
+}
+
+.icon-icons_building:before{
+  content: "\e618";
+  color: #6dc28c;
+  font-size: 150px; 
+}
+
+.icon-icons_thermometer:before{
+  content: "\e611";
+  color: #fff;
+  font-size: 86px;  
+}
+
+.icon-icons_window:before{
+  content: "\e60f";
+  color: #fff;
+  font-size: 80px;  
+}
+
+.ap_info .temp{
+  padding-bottom: 20px;
+}
+
+p.ap_info_housing{
+  width: 200px;
+  margin: 0 auto;
+}
+
+.building{
+  clear: left;
+}
+
+p.rad_on{
+  font-size: 33px;
+}
+
+p.temp.avg{
+  color: #fff;
+  font-size: 20px;
+}
+
+p.temp_val_rad{
+  color: #fff;
+}
+
+.tvalue_rad{
+  color: #fff;
+  font-size: 25px;
+}
+
+.dark-blue-bg img{
+  width: 100px;
+  padding-bottom: 15px;
+}
+
+.purple-bg{
+  background-color: #856193;
+  color: #fff;  
+}
+
+.dark-grey-bg{
+  background-color: #4b5d63;
+}
+
+.dark-grey-bg p{
+}
+
+.grey-bg{
+  background-color: #dddddd;
+  color: #000000;
+}
+
+p.temp_hist{
+  color: #000;
+  font-size: 20px;
+  padding-bottom: 30px;
+  padding-top: 7px;
+}
+
+.hist.icon-icons_history:before{
+  color: #000;
+  font-size: 100px;
+}
+
+.housing.icon-icons_building:before{
+  color: #fff;
+}
+
+.content-tile.purple-bg.alerts-content{
+  padding-bottom: 100px;
+}
+
+p.rad_text{
+  font-size: 20px;
+}
+
+p.radiators{
+  font-size: 20px;
+}
+
+p.windows{
+  font-size: 20px;
+}
+
+p.building{
+  padding-bottom: 30px;
+  font-size: 20px;
+}
+
+.content-tile.building-bg{
+  padding-bottom: 50px;
+}
+
+p.alerts{
+  color:#fff;
+  font-size: 20px;
+  padding-bottom: 30px;
+}
+.light-blue-bg{
+  background-color: #17bee5;
+  color: #fff;
+}
+
+.plus-button img{
+  width: 20px;
+  margin-top: -68px;
+  float: right;
+}
+
+.purple-bg.alerts-content img.alrt{
+  width: 100px;
+}
+p.temp.text-uppercase.hist{
+  padding-bottom: 30px;
+}
+
+.tvalue.weather{
+    font-size: 32px;
+    padding-bottom: 2px;
+}
+
+.content-tile.histo{
+    padding-bottom: 106px;
+}
 body {
   color: #ffffff;
   /*background-color: #242827;*/

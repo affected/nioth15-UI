@@ -1,21 +1,48 @@
 <!-- Housig company overview -->
 <div class="container-fluid">
   <div id="stage-2" class="row">
-    <div class="content-tile col-sm-6 col-md-4 dark-blue-bg">
-      <span ng-click="setListType(1)">icon :)</span>
+    <div class="content-tile col-sm-6 col-md-4 dark-blue-bg ap_info text-center">
+      <div class="plus-button"><img src="images/plus_button.svg" alt=""></div>
+      <p class="temp ap_info_housing text-uppercase">Apartment information</p>
+      <span class="icon icon-icons_door"></span>
     </div>
-    <div class="content-tile col-sm-6 col-md-4 light-grey-bg" ng-click="setListType(2)">
-      <span>Temperature avg</span>
-      <a href="#/list/{{data.temperature.id}}">{{data.temperature.value}}</a>
+    <div class="content-tile col-sm-6 col-md-4 grey-bg text-center">
+      <div class="plus-button"><img src="images/plus_button.svg" alt=""></div>
+      <p class="radiators text-uppercase">Radiators on</p>
+      <p class="rad_on">4/20</p>
+      <span class="rad_dark icon icon-icons_radiator"></span>
     </div>
-    <div class="content-tile col-sm-6 col-md-4 light-red-bg" ng-click="setListType(3)">
-       <span>Graph</span>      
+    <div class="content-tile col-sm-6 col-md-4 purple-bg text-center">
+      <div class="plus-button"><img src="images/plus_button.svg" alt=""></div>
+      <p class="temp avg text-uppercase">Min. temperature <a class="tvalue_rad" href="#/list/{{data.temperature.id}}">{{data.temperature.value}}</a>°</p>
+      <p class="temp avg text-uppercase">Max. temperature <a class="tvalue_rad" href="#/list/{{data.temperature.id}}">{{data.temperature.value}}</a>°</p>
+      <span class="icon icon-icons_thermometer"></span>
     </div>
-    <div class="content-tile col-sm-6 col-md-4 light-cyan-bg">
-      <span>Open Windows</span>
+    <div class="content-tile col-sm-6 col-md-4 light-blue-bg text-center">
+      <div class="plus-button"><img src="images/plus_button.svg" alt=""></div>
+      <p class="windows text-uppercase">Windows Open</p>
+      <p class="rad_on">5/20</p> 
+       <span class="icon icon-icons_window"></span>   
     </div>
-    <div class="content-tile col-sm-6 col-md-4 dark-blue-bg">
-      <span>Weather</span>
-    </div>      
+    <div class="content-tile col-sm-6 col-md-4 dark-grey-bg text-center">
+      <p class="temp text-uppercase">Weather</p>
+      <p class="tvalue weather">Nice and shiny 20°</p>
+      <span class="icon icon-icons_cloud"></span>  
+    </div>
+    <div class="content-tile col-sm-6 col-md-4 grey-bg text-center">
+      <div class="plus-button"><img src="images/plus_button.svg" alt=""></div>
+      <p class="temp_hist text-uppercase">History</p>
+      <span class="hist icon icon-icons_history"></span> 
+    </div>
+    <div class="content-tile col-sm-6 col-md-4 purple-bg alerts-content text-center">
+      <div class="plus-button"><img src="images/plus_button.svg" alt=""></div>
+      <p class="alerts text-uppercase">Alerts</p> 
+      <img class="alrt" src="images/alert_grey.svg" alt="">
+    </div> 
+    <div class="content-tile col-sm-6 col-md-4 light-blue-bg text-center building-bg">
+      <div class="plus-button"><img src="images/plus_button.svg" alt=""></div>
+      <p class="building text-uppercase">Building overview</p>
+       <span class="housing icon icon-icons_building"></span>   
+    </div>         
   </div>
 </div>
