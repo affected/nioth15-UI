@@ -1,0 +1,29 @@
+{
+    "identification": {
+        "id": 0,
+        "name": "A1"
+    },
+    "emoticon": {
+      "id": 0,
+      "state":"cry"
+    },
+    "temperature": {
+      "id":1,
+      "type":"avg",      
+      "value":"30"
+    },
+    "notifications": {
+      "id":0,
+      "amount":1,
+      "latest": {
+        "id":0,
+        "message":"Possible air lock in radiator",
+        "datetime":"10-04-2015 12:01:01",
+        "status":"open"
+      }
+    },
+    "weather": {
+      "message":"Nice and shiny",
+      "temperature":"20"
+    }
+}

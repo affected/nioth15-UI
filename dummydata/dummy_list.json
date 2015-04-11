@@ -1,0 +1,10 @@
+{
+  "identification": {"id":101,"name":"A1"},
+  "temperatures":[
+    {"id":0,"temp":"30"},
+    {"id":1,"temp":"31"},
+    {"id":5,"temp":"33"},
+    {"id":6,"temp":"30"},
+    {"id":10,"temp":"28"}
+  ]
+}

@@ -1,0 +1,148 @@
+
+
+@font-face {
+  font-family: 'ClearSansLight';
+  src: url('../fonts/ClearSans-Light.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/ClearSans-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/ClearSans-Light.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/ClearSans-Light.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/ClearSans-Light.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+@font-face {
+  font-family: 'ClearSansMed';
+  src: url('../fonts/ClearSans-Medium.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/ClearSans-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/ClearSans-Medium.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/ClearSans-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/ClearSans-Medium.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+body {
+  color: #ffffff;
+  background-color: #242827;
+  
+  font-family: 'ClearSansLight', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;   
+}
+
+/* typography */
+
+h1,h2,h3 {
+ font-family: 'ClearSansMed';
+}
+a, a:hover {
+  text-decoration: none;
+}
+.navbar-brand {
+
+  min-width: 90%;
+  display: inline-block;
+}
+.site-title{
+  text-align: center;
+  margin: 10px auto;
+}
+/* colors */
+
+.dark-blue {
+  color: #4A5B62;
+}
+.dark-blue-bg {
+  background-color: #4A5B62;
+}
+
+.light-grey {
+  color: #F2F2F2;
+}
+.light-grey-bg {
+  background-color: #F2F2F2;
+  color: #4A5B62;
+}
+
+.light-red {
+  color: #ED5D81;
+}
+.light-red-bg {
+  background-color: #ED5D81;
+}
+
+.light-cyan {
+  color: #7BD4C2;
+}
+.light-cyan-bg {
+  backgrou
+  nd-color: #7BD4C2;
+}
+
+/* containers & grid */
+
+.main {
+
+  padding: 0;
+  max-width: 100%;
+  margin: 0;
+
+  /* devmode !!!*/  
+  /*max-width: 900px;
+  margin: 0 auto;*/
+  padding-top: 120px;  
+}
+.page-header {
+  background-color: #ffffff;
+  overflow: hidden;
+}
+.content-tile {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+/*
+.content-tile:last-child {
+  margin-left: 0;
+  padding-left: 0;  
+}
+.content-tile:first-child {  
+  margin-right: 0;
+  padding-right: 0;
+}
+*/
+
+/* Bootstrap overrides */
+/*
+.container-fluid,
+.row {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+*/
+
+/* forms */
+
+input {
+  
+  color: #4A5B62;
+}
+
+/* misc */
+
+.dummy-box {
+  border: 1px solid red;
+  height: 300px;
+}
+
+/* media queries */
+@media screen and (max-width: 768px) {
+  .content {
+    overflow: hidden;
+  }
+}
+@media screen and (min-width: 769px) {
+  .content {
+    padding: 0 15px;
+  }
+}

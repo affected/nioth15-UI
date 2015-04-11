@@ -1,0 +1,26 @@
+<p>Tenant overview</p>
+
+<div class="container-fluid">
+  <div id="stage-2" class="row">
+    <div class="content-tile col-sm-6 col-md-4 dark-blue-bg">
+      <span>icon :)</span>
+      <span>{{data.emoticon.state}}</span>
+    </div>
+    <div class="content-tile col-sm-6 col-md-4 light-grey-bg">
+      <span>Room Temperature avg</span>
+      <a href="#/list/{{data.roomtemperature.id}}">{{data.roomtemperature.value}}</a>
+    </div>
+    <div class="content-tile col-sm-6 col-md-4 light-grey-bg">
+      <span>Radiator Temperature avg</span>
+      <a href="#/list/{{data.radiatortemperature.id}}">{{data.radiatortemperature.value}}</a>
+    </div>    
+    <div class="content-tile col-sm-6 col-md-4 dark-blue-bg">
+      <span>Info</span>
+       <a href="#/list/{{data.notifications.latest.id}}">Count: {{data.notifications.amount}} Latest {{data.notifications.latest.message}}</a>
+    </div>      
+    <div class="content-tile col-sm-6 col-md-4 dark-blue-bg">
+      <span>Weather</span>
+      <span>{{data.weather.message}}  {{data.weather.temperature}} C&deg;</span>
+    </div>      
+  </div>
+</div>
