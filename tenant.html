@@ -2,17 +2,20 @@
 
 <div class="container-fluid">
   <div id="stage-2" class="row">
-    <div class="content-tile col-sm-6 col-md-4 dark-blue-bg">
-      <span>icon :)</span>
-      <span>{{data.emoticon.state}}</span>
+    <div class="content-tile col-sm-6 col-md-4 dark-blue-bg text-center">
+      <p class="ap text-center">AP. 26</p>
+      <span class="icon icon-icons_smiley1"></span>
+      <!--<span>{{data.emoticon.state}}</span>-->
     </div>
-    <div class="content-tile col-sm-6 col-md-4 light-grey-bg">
-      <span>Room Temperature avg</span>
-      <a href="#/list/{{data.roomtemperature.id}}">{{data.roomtemperature.value}}</a>
+    <div class="content-tile col-sm-6 col-md-4 light-grey-bg text-center">
+      <p class="temp text-uppercase">Temperature indoors</p>
+      <p class="temp_val"><a class="tvalue" href="#/list/{{data.roomtemperature.id}}">{{data.roomtemperature.value}}</a>°</p>
+      <span class="icon icon-icons_thermometer2"></span>
     </div>
-    <div class="content-tile col-sm-6 col-md-4 light-grey-bg">
-      <span>Radiator Temperature avg</span>
-      <a href="#/list/{{data.radiatortemperature.id}}">{{data.radiatortemperature.value}}</a>
+    <div class="content-tile col-sm-6 col-md-4 light-grey-bg text-center">
+      <p class="temp text-uppercase">Radiator Temperature</p>
+      <p class="temp_val"><a class="tvalue" href="#/list/{{data.radiatortemperature.id}}">{{data.radiatortemperature.value}}</a>°</p>
+      <span class="icon icon-icons_radiator"></span>
     </div>    
     <div class="content-tile col-sm-6 col-md-4 dark-blue-bg">
       <span>Info</span>
