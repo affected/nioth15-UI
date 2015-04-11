@@ -1,4 +1,9 @@
-nioth15-UI
-==========
+# nioth15-UI
+User Interface for nioth15 web application
 
-User Interface for nioth demo
+Depencies
+
+- angularjs
+- jQuery
+- Twitter Bootstrap
+- Graph.js
