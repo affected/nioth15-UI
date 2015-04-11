@@ -3,18 +3,18 @@
 <div class="container-fluid">
   <div id="stage-2" class="row">
     <div class="content-tile col-sm-6 col-md-4 dark-blue-bg text-center">
-      <p class="ap text-center">AP. 26</p>
+      <p class="ap text-center">{{data[0].apartmentName}}</p>
       <span class="icon icon-icons_smiley1"></span>
       <!--<span>{{data.emoticon.state}}</span>-->
     </div>
     <div class="content-tile col-sm-6 col-md-4 light-grey-bg text-center">
       <p class="temp text-uppercase">Temperature indoors</p>
-      <p class="temp_val"><a class="tvalue" href="#/list/{{data.roomtemperature.id}}">{{data.roomtemperature.value}}</a>°</p>
+      <p class="temp_val"><a class="tvalue" href="#/list/{{data.roomtemperature.id}}">{{data[0].insideTemperature}}</a>°</p>
       <span class="icon icon-icons_thermometer2"></span>
     </div>
     <div class="content-tile col-sm-6 col-md-4 light-grey-bg text-center">
       <p class="temp text-uppercase">Radiator Temperature</p>
-      <p class="temp_val"><a class="tvalue" href="#/list/{{data.radiatortemperature.id}}">{{data.radiatortemperature.value}}</a>°</p>
+      <p class="temp_val"><a class="tvalue" href="#/list/{{data.radiatortemperature.id}}">{{data[0].radiatorTemperature}}</a>°</p>
       <span class="icon icon-icons_radiator"></span>
     </div>    
     <div class="content-tile col-sm-6 col-md-4 dark-blue-bg text-center">

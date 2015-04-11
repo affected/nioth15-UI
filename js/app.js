@@ -2,7 +2,8 @@
   'ngRoute',
   'tweetHeatControllers',
   'chart.js',
-  'ngResource'
+  'ngResource',
+  'tweetHeatServices'
 ]);
 tweetHeat.config(['$httpProvider', function($httpProvider) {
         $httpProvider.defaults.useXDomain = true;
@@ -44,4 +45,5 @@ tweetHeat.config(['$routeProvider',
 tweetHeat.run(function($rootScope) {
     //0=tenant,10=admin
     $rootScope.userrole = 0; 
+    $rootScope.activelist = 0;
 })  

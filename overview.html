@@ -2,13 +2,13 @@
 <div class="container-fluid">
   <div id="stage-2" class="row">
     <div class="content-tile col-sm-6 col-md-4 dark-blue-bg">
-      <span>icon :)</span>
+      <span ng-click="setListType(1)">icon :)</span>
     </div>
-    <div class="content-tile col-sm-6 col-md-4 light-grey-bg">
+    <div class="content-tile col-sm-6 col-md-4 light-grey-bg" ng-click="setListType(2)">
       <span>Temperature avg</span>
       <a href="#/list/{{data.temperature.id}}">{{data.temperature.value}}</a>
     </div>
-    <div class="content-tile col-sm-6 col-md-4 light-red-bg">
+    <div class="content-tile col-sm-6 col-md-4 light-red-bg" ng-click="setListType(3)">
        <span>Graph</span>      
     </div>
     <div class="content-tile col-sm-6 col-md-4 light-cyan-bg">

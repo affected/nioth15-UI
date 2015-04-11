@@ -1,69 +1,22 @@
 
 var tweetHeatControllers = angular.module('tweetHeatControllers', []);
 
-tweetHeatControllers.controller('overviewCtrl', ['$scope', '$http', function($scope, $http) {
- console.log("dbg:2.1");
- $http.get('dummydata/dummy_overview.json').success(function(data) {
-    console.log("dbg:2.2");
-    $scope.data = data;
-    });  
-}]);
-
-tweetHeatControllers.controller('listCtrl', ['$scope', '$routeParams', '$http', function($scope, $routeParams, $http) {
- 
- console.log("dbg:3.1");
- //$http.get('dummydata/dummy_list.json?id='+ $routeParams.phoneId).success(function(data) {
-   
-    //$http.defaults.useXDomain = true;
-
-    //$scope.useHttp = function() {   
-    
-      //console.log("dbg:3.2");
-    
-      $http.get('http://10.20.4.77:8080/lists/').success(function(data) {   
-   
-        console.log("dbg:3.3");
-        
-        $scope.data = data;
-        
-        //console.log("dbg data: "+data[0].getInsideTemperatureComparison);
-        
-        //$scope.identification =  data.identification;
-        //$scope.temperatures =  data.temperatures;  
-        }); 
-    //}
-}]);
-
-tweetHeatControllers.controller('tenantCtrl', ['$scope', '$http', '$interval', function($scope, $http, $interval) {
- console.log("dbg:4.1");
- 
-  //$interval(callAtInterval, 2000);
- 
- $http.get('dummydata/dummy_tenant.json').success(function(data) {
-    console.log("dbg:4.2");
-    $scope.data = data;
-    });  
-}]);
-function callAtInterval() {
-    console.log("Interval occurred");
-}
-tweetHeatControllers.controller('graphCtrl', ['$scope', function($scope) {
-  
- console.log("dbg:5.1");
-  $scope.labels = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
-  $scope.series = ['Series A', 'Series B'];
-
-  $scope.data = [
-    [65, 59, 80, 81, 56, 55, 40],
-    [28, 48, 40, 19, 86, 27, 90]
-  ];
-  console.log("dbg:5.2");
-}]);
-
-tweetHeatControllers.controller('loginCtrl', ['$scope', '$rootScope', function($scope,$rootScope) {
+tweetHeatControllers.controller('loginCtrl', ['$scope',  '$http', '$rootScope', 'serverpoller', '$interval', function($scope,$http,$rootScope,serverpoller,$interval) {
   
   console.log("dbg:6.1");
 
+  $scope.callAtInterval = function() {
+    //console.log("$scope.callAtInterval - Interval occurred");
+
+    $http.get('http://10.20.4.77:8080/lists/?refresh='+new Date().getTime()).success(function(data) {
+      //console.log("dbg:6.3");      
+      $scope.data = data;
+      serverpoller.serverdata = data;      
+    });
+  }
+  $scope.callAtInterval();
+  $scope.stop = $interval(function(){ $scope.callAtInterval(); }, 5000); 
+ 
   $scope.getRole = function() {
       return $rootScope.userrole;
   };
@@ -79,6 +32,86 @@ tweetHeatControllers.controller('loginCtrl', ['$scope', '$rootScope', function($
       $rootScope.userrole = $scope.userrole = role;
   };    
 }]);
+
+tweetHeatControllers.controller('tenantCtrl', ['$scope', '$http', 'serverpoller', function($scope, $http, serverpoller) {
+ console.log("dbg:4.1");
+  $scope.data = serverpoller.serverdata; 
+    /*
+    $scope.callAtInterval = function() {
+      console.log("$scope.callAtInterval - Interval occurred");
+
+      $http.get('dummydata/dummy_tenant.json?f'+new Date().getTime()).success(function(data) {
+        console.log("dbg:4.2");
+        $scope.data = data;
+      });
+    }
+    $scope.stop = $interval(function(){ $scope.callAtInterval(); }, 5000);
+
+    var dereg = $rootScope.$on('$locationChangeSuccess', function() {
+      $interval.cancel($scope.stop);
+      dereg();
+    });*/    
+ 
+}]);
+/*
+function callAtInterval() {
+    console.log("Interval occurred");
+}
+*/
+
+tweetHeatControllers.controller('overviewCtrl', ['$scope', '$http', '$rootScope', 'serverpoller', function($scope, $http, $rootScope,serverpoller) {
+ console.log("dbg:2.1");
+ 
+ $scope.activelist = $rootScope.activelist
+  /*
+  $http.get('dummydata/dummy_overview.json').success(function(data) {
+    console.log("dbg:2.2");
+    $scope.data = data;
+  });  
+  */
+  
+  $scope.data = serverpoller.serverdata;  
+  
+  $scope.setListType = function(listtype) {
+    console.log("dbg:2.3 "+listtype+" root: "+$rootScope.activelist);
+    $rootScope.activelist = listtype;
+    console.log("root 2: "+$rootScope.activelist);
+  }
+  
+}]);
+
+tweetHeatControllers.controller('listCtrl', ['$scope', '$routeParams', '$http', '$rootScope', 'serverpoller', function($scope, $routeParams, $http, $rootScope,serverpoller) {
+ 
+ //console.log("dbg:3.1");
+ 
+ console.log("root 3: "+$rootScope.activelist);
+ 
+  $scope.data = serverpoller.serverdata;  
+  /*    
+  $http.get('http://10.20.4.77:8080/lists/').success(function(data) {   
+
+    console.log("dbg:3.3");    
+    $scope.data = data;
+  }); 
+  */
+
+}]);
+
+
+tweetHeatControllers.controller('graphCtrl', ['$scope', function($scope) {
+  
+ console.log("dbg:5.1");
+  $scope.labels = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
+  $scope.series = ['Series A', 'Series B'];
+
+  $scope.data = [
+    [65, 59, 80, 81, 56, 55, 40],
+    [28, 48, 40, 19, 86, 27, 90]
+  ];
+  console.log("dbg:5.2");
+}]);
+
+
 
 tweetHeatControllers.controller('weatherCtrl', ['$scope', '$http', function($scope, $http) {
   
