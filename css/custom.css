@@ -216,7 +216,7 @@ p.temp.weath{
 .content-tile.list-view{
   /*padding-top: 30px;
   padding-bottom: 30px;*/
-    padding-top: 15px;
+    padding-top: 25px;
     padding-bottom: 15px;
 }
 
@@ -260,6 +260,16 @@ p.temp_hist{
   padding-bottom: 4px;
 }
 
+.building{
+  width: 350px;
+  margin: 0 auto;
+}
+
+.building img{
+  width: 100px;
+  margin: 0 auto;
+}
+
 .list.icon-icons_smiley1:before{
   float: right;
   padding-right: 50px;
@@ -269,6 +279,10 @@ p.temp_hist{
   font-size: 95px;
   float: left;
   padding-left: 40px;
+}
+
+.list.icon-icons_radiator:before{
+  color: #000;
 }
 
 .hist.icon-icons_history:before{
