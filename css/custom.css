@@ -164,6 +164,29 @@ p.temp_val_rad{
   padding-bottom: 15px;
 }
 
+.nb_alerts{
+  position: absolute;
+  margin-top: 71px;
+  margin-left: -25px;
+  color: #f9064b;
+}
+
+.nb_alerts.adm{
+  position: absolute;
+  margin-top: 71px;
+  margin-left: -25px;
+  color: #f9064b;
+}
+
+.temp_hist a{
+  color: #000;
+}
+
+
+p.temp.weath{
+  padding-bottom: 1px;
+}
+
 .purple-bg{
   background-color: #856193;
   color: #fff;  
@@ -193,11 +216,29 @@ p.temp_val_rad{
 .content-tile.list-view{
   /*padding-top: 30px;
   padding-bottom: 30px;*/
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
+.content-tile.dark-grey-bg.list-view{
+    padding-top: 39px;
+    padding-bottom: 40px;  
+}
 .t_info{
   float: right;
   padding-right: 20px;
+}
+
+p.ap_number{
+  font-size: 25px;
+}
+
+p.t_indoors_val{
+  font-size: 35px;
+}
+
+p.t_indoors{
+  font-size: 15px;
 }
 
 p.temp_hist{
@@ -207,11 +248,27 @@ p.temp_hist{
   padding-top: 7px;
 }
 
-.list.icon-icons_thermometer2:before{
-  color: #fff;
-  font-size: 80px;
+.dark-grey-bg p.ap_number{
+  color: #6dc28c;
   float: left;
   padding-left: 20px;
+  padding-top: 20px;
+  font-size: 40px;
+}
+.content-tile.minus_b{
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.list.icon-icons_smiley1:before{
+  float: right;
+  padding-right: 50px;
+}
+.list.icon-icons_thermometer2:before{
+  color: #fff;
+  font-size: 95px;
+  float: left;
+  padding-left: 40px;
 }
 
 .hist.icon-icons_history:before{
@@ -264,6 +321,15 @@ p.alerts{
   float: right;
 }
 
+.minus-button img{
+  width: 20px;
+  float: right;
+}
+
+.content-tile.purple-bg.minus_b{
+  background-color: #a278b5;
+}
+
 .purple-bg.alerts-content img.alrt{
   width: 100px;
 }
@@ -278,7 +344,7 @@ p.temp.text-uppercase.hist{
 }
 
 .content-tile.histo{
-    padding-bottom: 106px;
+      padding-bottom: 107px;
 }
 body {
   color: #ffffff;
@@ -366,6 +432,7 @@ a, a:hover {
   padding-top: 80px;
   padding-bottom: 80px;
   border: 1px solid #fff;
+  overflow: hidden;
 }
 
 /*
