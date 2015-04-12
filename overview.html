@@ -6,13 +6,13 @@
       <p class="temp ap_info_housing text-uppercase">Apartment information</p>
       <span class="icon icon-icons_door"></span>
     </div>
-    <div class="content-tile col-sm-6 col-md-4 grey-bg text-center">
+    <div class="content-tile col-sm-6 col-md-4 grey-bg text-center"  ng-click="setListType(2)">
       <div class="plus-button"><img src="images/plus_button.svg" alt=""></div>
       <p class="radiators text-uppercase">Radiators on</p>
       <p class="rad_on">4/20</p>
       <span class="rad_dark icon icon-icons_radiator"></span>
     </div>
-    <div class="content-tile col-sm-6 col-md-4 purple-bg text-center">
+    <div class="content-tile col-sm-6 col-md-4 purple-bg text-center" ng-click="setListType(1)">
       <div class="plus-button"><img src="images/plus_button.svg" alt=""></div>
       <p class="temp avg text-uppercase">Min. temperature <a class="tvalue_rad" href="#/list/{{data.temperature.id}}">{{data.temperature.value}}</a>°</p>
       <p class="temp avg text-uppercase">Max. temperature <a class="tvalue_rad" href="#/list/{{data.temperature.id}}">{{data.temperature.value}}</a>°</p>
@@ -26,12 +26,12 @@
     </div>
     <div class="content-tile col-sm-6 col-md-4 dark-grey-bg text-center">
       <p class="temp text-uppercase">Weather</p>
-      <p class="tvalue weather">Nice and shiny 20°</p>
+      <p class="tvalue weather">{{weatherdata.weather[0].description}} {{weatherdata.main.temp | number:1}} C&deg;</p>
       <span class="icon icon-icons_cloud"></span>  
     </div>
-    <div class="content-tile col-sm-6 col-md-4 grey-bg text-center">
+    <div class="content-tile col-sm-6 col-md-4 grey-bg text-center" ng-click="setListType(3)">
       <div class="plus-button"><img src="images/plus_button.svg" alt=""></div>
-      <p class="temp_hist text-uppercase">History</p>
+      <p class="temp_hist text-uppercase"><a href="#graph">History</a></p>
       <span class="hist icon icon-icons_history"></span> 
     </div>
     <div class="content-tile col-sm-6 col-md-4 purple-bg alerts-content text-center">

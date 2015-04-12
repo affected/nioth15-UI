@@ -4,7 +4,10 @@ var tweetHeatControllers = angular.module('tweetHeatControllers', []);
 tweetHeatControllers.controller('loginCtrl', ['$scope',  '$http', '$rootScope', 'serverpoller', '$interval', function($scope,$http,$rootScope,serverpoller,$interval) {
   
   console.log("dbg:6.1");
-
+  
+  
+  
+  /*
   $scope.callAtInterval = function() {
     //console.log("$scope.callAtInterval - Interval occurred");
 
@@ -16,6 +19,7 @@ tweetHeatControllers.controller('loginCtrl', ['$scope',  '$http', '$rootScope', 
   }
   $scope.callAtInterval();
   $scope.stop = $interval(function(){ $scope.callAtInterval(); }, 5000); 
+  */
  
   $scope.getRole = function() {
       return $rootScope.userrole;
@@ -33,9 +37,16 @@ tweetHeatControllers.controller('loginCtrl', ['$scope',  '$http', '$rootScope', 
   };    
 }]);
 
-tweetHeatControllers.controller('tenantCtrl', ['$scope', '$http', 'serverpoller', function($scope, $http, serverpoller) {
+tweetHeatControllers.controller('tenantCtrl', ['$scope', '$http', 'serverpoller', 'weatherprovider', function($scope, $http, serverpoller, weatherprovider) {
  console.log("dbg:4.1");
   $scope.data = serverpoller.serverdata; 
+  $scope.weatherdata = weatherprovider.weatherdata;
+  $.each(weatherprovider.weatherdata, function(key, value) {
+    
+    console.log("Key "+key+" value "+value);
+  });
+  //console.log("dbg: "+weatherprovider.weatherdata);
+  
     /*
     $scope.callAtInterval = function() {
       console.log("$scope.callAtInterval - Interval occurred");
@@ -59,10 +70,11 @@ function callAtInterval() {
 }
 */
 
-tweetHeatControllers.controller('overviewCtrl', ['$scope', '$http', '$rootScope', 'serverpoller', function($scope, $http, $rootScope,serverpoller) {
+tweetHeatControllers.controller('overviewCtrl', ['$scope', '$http', '$rootScope', 'serverpoller', 'weatherprovider', function($scope, $http, $rootScope, serverpoller, weatherprovider) {
  console.log("dbg:2.1");
  
- $scope.activelist = $rootScope.activelist
+ $scope.activelist = $rootScope.activelist;
+ $scope.weatherdata = weatherprovider.weatherdata;
   /*
   $http.get('dummydata/dummy_overview.json').success(function(data) {
     console.log("dbg:2.2");
@@ -101,12 +113,12 @@ tweetHeatControllers.controller('listCtrl', ['$scope', '$routeParams', '$http', 
 tweetHeatControllers.controller('graphCtrl', ['$scope', function($scope) {
   
  console.log("dbg:5.1");
-  $scope.labels = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
-  $scope.series = ['Series A', 'Series B'];
+  $scope.labels = ['6.4', '7.4', '8.4', '9.4', '10.4', '11.4', '12.4'];
+  $scope.series = ['Inside temperature', 'Radiator temperature'];
 
   $scope.data = [
-    [65, 59, 80, 81, 56, 55, 40],
-    [28, 48, 40, 19, 86, 27, 90]
+    [20,20,21,20,19,19,20],
+    [32, 32, 32, 30, 30, 29, 31]
   ];
   console.log("dbg:5.2");
 }]);
@@ -118,15 +130,7 @@ tweetHeatControllers.controller('weatherCtrl', ['$scope', '$http', function($sco
  console.log("dbg:4.1");
 
   //$scope.showWeather = function(position) {
-  $scope.showWeather = function() {  
-    console.log("dbg:4.2");
-    //$http.get('http://api.openweathermap.org/data/2.5/weather?lat='+position.coords.latitude+'&lon='+position.coords.longitude).success(function(data) {
-    $http.get('http://api.openweathermap.org/data/2.5/weather?q=Lund,se&units=metric').success(function(data) {
-      console.log("dbg:4.2"+data);
-      $scope.data = data;
-    });  
-  }
-  $scope.showWeather();
+
   /*
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition($scope.showWeather);

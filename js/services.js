@@ -5,3 +5,8 @@ tweetHeatServices.factory('serverpoller',[ function(){
        serverdata: {data: null } 
     }
 }]);
+tweetHeatServices.factory('weatherprovider',[ function(){
+    return {
+       weatherdata: {data: null } 
+    }
+}]);

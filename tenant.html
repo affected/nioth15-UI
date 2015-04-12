@@ -31,7 +31,7 @@
     </div>     
     <div class="content-tile col-sm-6 col-md-4 dark-blue-bg text-center">
       <p class="temp text-uppercase">Weather</p>
-      <p><span class="tvalue weather">{{data.weather.message}}  {{data.weather.temperature}} C&deg;</span></p>
+      <p><span class="tvalue weather">{{weatherdata.weather[0].description}} {{weatherdata.main.temp | number:1}} C&deg;</span></p>
       <span class="icon icon-icons_cloud"></span>
     </div> 
     <div class="content-tile col-sm-6 col-md-4 dark-blue-bg text-center building">

@@ -42,8 +42,31 @@ tweetHeat.config(['$routeProvider',
       });
   }]);        
   
-tweetHeat.run(function($rootScope) {
-    //0=tenant,10=admin
-    $rootScope.userrole = 0; 
-    $rootScope.activelist = 0;
+tweetHeat.run(function($rootScope, $http, $interval, serverpoller, weatherprovider) {
+  
+  //0=tenant,10=admin
+  $rootScope.userrole = 0; 
+  $rootScope.activelist = 0;    
+  
+  callAtInterval = function() {
+    //console.log("$scope.callAtInterval - Interval occurred");
+
+    $http.get('http://10.20.4.77:8080/lists/?refresh='+new Date().getTime()).success(function(data) {
+      serverpoller.serverdata = data;      
+    });
+  }
+  callAtInterval();
+  $interval(function(){ callAtInterval(); }, 5000);     
+  
+  showWeather = function() {  
+    console.log("dbg:4.2");
+
+    $http.get('http://api.openweathermap.org/data/2.5/weather?q=Lund,se&units=metric').success(function(data) {
+      console.log("dbg:4.2"+data);
+      weatherprovider.weatherdata = data;
+     //console.log(weatherprovider.weatherdata.weather[0].description);
+    });  
+  }
+  showWeather();    
+    
 })  
