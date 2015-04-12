@@ -15,10 +15,9 @@
 
       </div>
       <div class="content-tile col-sm-6 col-md-4 dark-grey-bg list-view" ng-show="activelist==3">
-        <p class="ap_number">{{listdata.apartmentName}} {{listdata.alert}}</p>
-        
-        <span class="icon icon-icons_smiley1 pull-right" ng-if="data[0].emoticon=='1'"></span>
-        <span class="icon icon-icons_smiley0 pull-right" ng-if="data[0].emoticon=='0'"></span>
+        <p class="ap_number">{{listdata.apartmentName}}</p>
+        <span class="list icon icon-icons_smiley1" ng-if="data[0].emoticon=='1'"></span>
+        <span class="list icon icon-icons_smiley0" ng-if="data[0].emoticon=='0'"></span>
       </div>
       <div class="content-tile col-sm-6 col-md-4 grey-bg list-view text-center" ng-show="activelist==2">
         <span class="list icon icon-icons_radiator"></span>  
