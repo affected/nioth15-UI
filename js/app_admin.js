@@ -29,6 +29,9 @@ tweetHeat.config(['$routeProvider',
         templateUrl: 'graph.html',
         controller: 'graphCtrl'
       }).
+      when('/building', {
+        templateUrl: 'building.html',
+      }).        
       when('/authenticate', {
         templateUrl: 'authenticate.html',
         controller: 'loginCtrl'

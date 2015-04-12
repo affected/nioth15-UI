@@ -32,7 +32,10 @@ tweetHeat.config(['$routeProvider',
       when('/authenticate', {
         templateUrl: 'authenticate.html',
         controller: 'loginCtrl'
-      }).    
+      }).
+      when('/building', {
+        templateUrl: 'building.html',
+      }).       
       otherwise({
         redirectTo: '/tenant'
       });

@@ -14,8 +14,8 @@
     </div>
     <div class="content-tile col-sm-6 col-md-4 purple-bg text-center" ng-click="showView('list',1)">
       <div class="plus-button"><img src="images/plus_button.svg" alt=""></div>
-      <p class="temp avg text-uppercase">Min. temperature <a class="tvalue_rad" href="#/list/{{data.temperature.id}}">{{data.temperature.value}}</a>°</p>
-      <p class="temp avg text-uppercase">Max. temperature <a class="tvalue_rad" href="#/list/{{data.temperature.id}}">{{data.temperature.value}}</a>°</p>
+      <p class="temp avg text-uppercase">Min. temperature {{data[0].insideTemperatureMin}}°</p>
+      <p class="temp avg text-uppercase">Max. temperature {{data[0].insideTemperatureMax}}°</p>
       <span class="icon icon-icons_thermometer"></span>
     </div>
     <div class="content-tile col-sm-6 col-md-4 light-blue-bg text-center">
@@ -38,9 +38,12 @@
       <div class="plus-button"><img src="images/plus_button.svg" alt=""></div>
       <p class="alerts text-uppercase">Alerts</p> 
       <img class="alrt" src="images/alert_grey.svg" alt="">
-      <span class="nb_alerts adm">3</span>   
+     
+      <span class="nb_alerts adm" ng-if="data[0].alert">1</span>
+      <span class="nb_alerts adm" ng-if="!data[0].alert">0</span>      
+      
     </div> 
-    <div class="content-tile col-sm-6 col-md-4 light-blue-bg text-center building-bg" ng-click="showView('list',5)">
+    <div class="content-tile col-sm-6 col-md-4 light-blue-bg text-center building-bg" ng-click="showView('building',999)">
       <div class="plus-button"><img src="images/plus_button.svg" alt=""></div>
       <p class="building text-uppercase">Building overview</p>
        <span class="housing icon icon-icons_building"></span>   
