@@ -51,7 +51,7 @@ tweetHeat.run(function($rootScope, $http, $interval, serverpoller, weatherprovid
   callAtInterval = function() {
     //console.log("$scope.callAtInterval - Interval occurred");
 
-    $http.get('http://10.20.4.77:8080/lists/?refresh='+new Date().getTime()).success(function(data) {
+    $http.get('http://heatnix.cloudapp.net:8080/lists/?refresh='+new Date().getTime()).success(function(data) {
       serverpoller.serverdata = data;      
     });
   }
