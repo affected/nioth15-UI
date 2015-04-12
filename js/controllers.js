@@ -131,9 +131,20 @@ tweetHeatControllers.controller('graphCtrl', ['$scope', function($scope) {
   $scope.labels = ['6.4', '7.4', '8.4', '9.4', '10.4', '11.4', '12.4'];
   $scope.series = ['Inside temperature', 'Radiator temperature'];
 
+var random_arr1 = [];
+var random_arr2 = [];
+
+for (var i = 0; i < 7; i++) {
+  random_arr1.push( 10 + Math.floor((Math.random() * 10) + 1)  );
+}
+for (var i = 0; i < 7; i++) {
+  random_arr2.push( 20 + Math.floor((Math.random() * 10) + 1)  );
+}
+  
+  
   $scope.data = [
-    [20,20,21,20,19,19,20],
-    [32, 32, 32, 30, 30, 29, 31]
+     random_arr1,
+    random_arr2
   ];
   console.log("dbg:5.2");
 }]);

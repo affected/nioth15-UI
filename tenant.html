@@ -1,5 +1,3 @@
-<p>Tenant overview</p>
-
 <div class="container-fluid">
   <div id="stage-2" class="row">
     <div class="content-tile col-sm-6 col-md-4 dark-blue-bg text-center">
@@ -30,7 +28,8 @@
       <div class="plus-button"><img src="images/plus_button.svg" alt=""></div>
       <p class="temp text-uppercase alert_text">Alerts</p>
       <img src="images/alert_icon.svg" alt=""> 
-      <span class="nb_alerts">3</span>    
+      <span class="nb_alerts adm" ng-if="data[0].alert">1</span>
+      <span class="nb_alerts adm" ng-if="!data[0].alert">0</span>   
     </div>     
     <div class="content-tile col-sm-6 col-md-4 dark-blue-bg text-center">
       <p class="temp text-uppercase weath">Weather</p>
