@@ -32,9 +32,9 @@ tweetHeat.config(['$routeProvider',
       when('/authenticate', {
         templateUrl: 'authenticate.html',
         controller: 'loginCtrl'
-      }).    
+      }).  
       otherwise({
-        redirectTo: '/tenant'
+        redirectTo: '/overview'
       });
   }]);        
   
@@ -58,7 +58,7 @@ tweetHeat.run(function($rootScope, $http, $interval, serverpoller, weatherprovid
     console.log("dbg:4.2");
 
     $http.get('http://api.openweathermap.org/data/2.5/weather?q=Lund,se&units=metric').success(function(data) {
-      //console.log("dbg:4.2"+data);
+      console.log("dbg:4.2"+data);
       weatherprovider.weatherdata = data;
      //console.log(weatherprovider.weatherdata.weather[0].description);
     });  

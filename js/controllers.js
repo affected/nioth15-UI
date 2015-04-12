@@ -1,6 +1,8 @@
 
 var tweetHeatControllers = angular.module('tweetHeatControllers', []);
 
+
+
 tweetHeatControllers.controller('loginCtrl', ['$scope',  '$http', '$rootScope', 'serverpoller', '$interval', function($scope,$http,$rootScope,serverpoller,$interval) {
   
   console.log("dbg:6.1");
@@ -37,14 +39,21 @@ tweetHeatControllers.controller('loginCtrl', ['$scope',  '$http', '$rootScope', 
   };    
 }]);
 
-tweetHeatControllers.controller('tenantCtrl', ['$scope', '$http', 'serverpoller', 'weatherprovider', function($scope, $http, serverpoller, weatherprovider) {
+tweetHeatControllers.controller('tenantCtrl', ['$scope', '$http', '$location', '$rootScope', 'serverpoller', 'weatherprovider', function($scope, $http, $location, $rootScope, serverpoller, weatherprovider) {
+  
  console.log("dbg:4.1");
   $scope.data = serverpoller.serverdata; 
   $scope.weatherdata = weatherprovider.weatherdata;
-  $.each(weatherprovider.weatherdata, function(key, value) {
-    
+  /*$.each(weatherprovider.weatherdata, function(key, value) {    
     console.log("Key "+key+" value "+value);
-  });
+  });  */
+
+  $scope.showView = function(view,listtype){
+    if(listtype != 999) $rootScope.activelist = listtype;
+    $location.path(view); 
+  }
+    
+  
   //console.log("dbg: "+weatherprovider.weatherdata);
   
     /*
@@ -70,7 +79,7 @@ function callAtInterval() {
 }
 */
 
-tweetHeatControllers.controller('overviewCtrl', ['$scope', '$http', '$rootScope', 'serverpoller', 'weatherprovider', function($scope, $http, $rootScope, serverpoller, weatherprovider) {
+tweetHeatControllers.controller('overviewCtrl', ['$scope', '$http', '$rootScope', '$location', 'serverpoller', 'weatherprovider', function($scope, $http, $rootScope, $location, serverpoller, weatherprovider) {
  console.log("dbg:2.1");
  
  $scope.activelist = $rootScope.activelist;
@@ -84,11 +93,17 @@ tweetHeatControllers.controller('overviewCtrl', ['$scope', '$http', '$rootScope'
   
   $scope.data = serverpoller.serverdata;  
   
+  $scope.showView = function(view,listtype){
+    if(listtype != 999) $rootScope.activelist = listtype;
+    $location.path(view); 
+  }  
+  /*
   $scope.setListType = function(listtype) {
     console.log("dbg:2.3 "+listtype+" root: "+$rootScope.activelist);
     $rootScope.activelist = listtype;
     console.log("root 2: "+$rootScope.activelist);
   }
+  */
   
 }]);
 

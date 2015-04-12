@@ -7,26 +7,29 @@
       <span class="icon icon-icons_smiley1"></span>
       <!--<span>{{data.emoticon.state}}</span>-->
     </div>
-    <div class="content-tile col-sm-6 col-md-4 light-grey-bg text-center">
+    <div class="content-tile col-sm-6 col-md-4 light-grey-bg text-center" ng-click="showView('list',2)">
       <p class="temp text-uppercase">Temperature indoors</p>
       <p class="temp_val"><a class="tvalue" href="#/list/{{data.roomtemperature.id}}">{{data[0].insideTemperature}}</a>°</p>
       <span class="icon icon-icons_thermometer2"></span>
     </div>
-    <div class="content-tile col-sm-6 col-md-4 light-grey-bg text-center">
+    <div class="content-tile col-sm-6 col-md-4 light-grey-bg text-center" ng-click="showView('list',3)">
       <p class="temp text-uppercase">Radiator Temperature</p>
       <p class="temp_val"><a class="tvalue" href="#/list/{{data.radiatortemperature.id}}">{{data[0].radiatorTemperature}}</a>°</p>
       <span class="icon icon-icons_radiator"></span>
     </div>    
-    <div class="content-tile col-sm-6 col-md-4 dark-blue-bg text-center histo">
+    <div class="content-tile col-sm-6 col-md-4 dark-blue-bg text-center histo" ng-click="showView('graph',999)">
       <div class="plus-button"><img src="images/plus_button.svg" alt=""></div>
       <p class="temp text-uppercase hist">History</p>
       <span></span>
       <span class="icon icon-icons_history"></span>
       <!--<a href="#/list/{{data.notifications.latest.id}}">Count: {{data.notifications.amount}} Latest {{data.notifications.latest.message}}</a>-->
     </div>  
-    <div class="content-tile col-sm-6 col-md-4 dark-blue-bg text-center">
+    <div class="content-tile col-sm-6 col-md-4 dark-blue-bg text-center" ng-click="showView('list',4)">
       <div class="plus-button"><img src="images/plus_button.svg" alt=""></div>
-      <p class="temp text-uppercase alert_text">Alerts</p>
+      <p class="temp text-uppercase alert_text">Alerts 
+      <span class="alert-count" ng-if="data[0].alert">0</span>
+      <span class="alert-count" ng-if="!data[0].alert">1</span>
+      </p>
       <img src="images/alert_icon.svg" alt="">     
     </div>     
     <div class="content-tile col-sm-6 col-md-4 dark-blue-bg text-center">

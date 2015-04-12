@@ -257,7 +257,10 @@ p.alerts{
   background-color: #17bee5;
   color: #fff;
 }
-
+.plus-button {
+    cursor: pointer;
+    cursor: hand;
+}
 .plus-button img{
   width: 20px;
   margin-top: -68px;
