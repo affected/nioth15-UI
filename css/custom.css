@@ -142,6 +142,14 @@ p.building{
   padding-bottom: 17px;
 }
 
+.tenant_tw a{
+  color: #fff;
+}
+
+.tweet-housing a{
+  color: #fff;
+}
+
 .building{
   clear: left;
 }
