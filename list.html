@@ -2,8 +2,14 @@
 <div class="container-fluid" class="">
   <h3>List {{activelist}}</h3>
     <div id="stage-2" class="row">
-      <div class="content-tile col-sm-6 col-md-4 dark-blue-bg" ng-repeat="listdata in data">            
-        <span id="temp-list" class="temp-list">
+      <div class="content-tile col-sm-6 col-md-4 purple-bg list-view text-center" ng-repeat="listdata in data">  
+        <span class="list icon icon-icons_thermometer2"></span>  
+        <div class="t_info">
+          <p class="ap_number">Ap. 26</p>
+          <p class="t_indoors">Temperature indoors</p>
+          <p>21°</p> 
+        </div>
+        <!--<span id="temp-list" class="temp-list">
           Apartment id:  {{listdata.id}}          
         </span>
         <span id="temp-list" class="temp-list">
@@ -26,7 +32,13 @@
         </span>   
         <span id="temp-list" class="temp-list" ng-show="activelist==5">
            alert: {{listdata.alert}}
-        </span>
+        </span>-->
+      </div>
+      <div class="content-tile col-sm-6 col-md-4 dark-blue-bg">
+        <p>something</p>
+      </div>
+      <div class="content-tile col-sm-6 col-md-4 grey-bg">
+        <p>something</p>
       </div>
   </div>
 </div>

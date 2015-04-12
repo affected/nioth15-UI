@@ -181,11 +181,37 @@ p.temp_val_rad{
   color: #000000;
 }
 
+.hashtag{
+  font-size: 26px;
+  font-weight: 300;
+}
+
+.content-tile.tweet-housing{
+  padding-bottom: 49px;
+}
+
+.content-tile.list-view{
+  /*padding-top: 30px;
+  padding-bottom: 30px;*/
+}
+
+.t_info{
+  float: right;
+  padding-right: 20px;
+}
+
 p.temp_hist{
   color: #000;
   font-size: 20px;
   padding-bottom: 30px;
   padding-top: 7px;
+}
+
+.list.icon-icons_thermometer2:before{
+  color: #fff;
+  font-size: 80px;
+  float: left;
+  padding-left: 20px;
 }
 
 .hist.icon-icons_history:before{
@@ -241,6 +267,7 @@ p.alerts{
 .purple-bg.alerts-content img.alrt{
   width: 100px;
 }
+
 p.temp.text-uppercase.hist{
   padding-bottom: 30px;
 }
