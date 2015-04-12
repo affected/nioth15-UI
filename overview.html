@@ -6,30 +6,30 @@
       <p class="temp ap_info_housing text-uppercase">Apartment information</p>
       <span class="icon icon-icons_door"></span>
     </div>
-    <div class="content-tile col-sm-6 col-md-4 grey-bg text-center" ng-click="showView('list',2)">
+    <div class="content-tile col-sm-6 col-md-4 radt grey-bg text-center" ng-click="showView('list',2)">
       <div class="plus-button"><img src="images/plus_button.svg" alt=""></div>
       <p class="radiators text-uppercase">Radiators on</p>
       <p class="rad_on">4/20</p>
       <span class="rad_dark icon icon-icons_radiator"></span>
     </div>
-    <div class="content-tile col-sm-6 col-md-4 purple-bg text-center" ng-click="showView('list',1)">
+    <div class="content-tile col-sm-6 col-md-4 purple-bg text-center minmax" ng-click="showView('list',1)">
       <div class="plus-button"><img src="images/plus_button.svg" alt=""></div>
       <p class="temp avg text-uppercase">Min. temperature {{data[0].insideTemperatureMin}}°</p>
       <p class="temp avg text-uppercase">Max. temperature {{data[0].insideTemperatureMax}}°</p>
       <span class="icon icon-icons_thermometer"></span>
     </div>
-    <div class="content-tile col-sm-6 col-md-4 light-blue-bg text-center">
+    <div class="content-tile col-sm-6 col-md-4 light-blue-bg ikk text-center">
       <!--<div class="plus-button"><img src="images/plus_button.svg" alt=""></div>-->
       <p class="windows text-uppercase">Windows Open</p>
       <p class="rad_on">5/20</p> 
        <span class="icon icon-icons_window"></span>   
     </div>
-    <div class="content-tile col-sm-6 col-md-4 dark-grey-bg text-center">
+    <div class="content-tile col-sm-6 col-md-4 dark-grey-bg wth text-center">
       <p class="temp text-uppercase">Weather</p>
       <p class="tvalue weather">{{weatherdata.weather[0].description}} {{weatherdata.main.temp | number:1}} C&deg;</p>
       <span class="icon icon-icons_cloud"></span>  
     </div>
-    <div class="content-tile col-sm-6 col-md-4 grey-bg text-center" ng-click="showView('graph',999)">
+    <div class="content-tile col-sm-6 col-md-4 grey-bg histor text-center" ng-click="showView('graph',999)">
       <div class="plus-button"><img src="images/plus_button.svg" alt=""></div>
       <p class="temp_hist text-uppercase"><a href="#graph">History</a></p>
       <span class="hist icon icon-icons_history"></span> 

@@ -142,10 +142,20 @@ p.ap_info_housing{
   margin: 0 auto;
 }
 
+p.building{
+  font-size: 23px;
+  padding-bottom: 17px;
+}
+
 .building{
   clear: left;
 }
 
+.building_rak{
+  width: 224px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
 p.rad_on{
   font-size: 33px;
 }
@@ -265,14 +275,31 @@ p.temp_hist{
   padding-bottom: 4px;
 }
 
-.building{
-  width: 350px;
+.building_ico{
+  width: 377px;
   margin: 0 auto;
 }
 
+.content-tile.alrt{
+  padding-bottom: 82px;
+}
+
+.content-tile.cld{
+  padding-bottom: 81px;
+}
+
 .building img{
-  width: 100px;
+  width: 233px;
   margin: 0 auto;
+  padding-top: 37px;
+}
+
+.content-tile.purple-bg.minmax{
+  padding-bottom: 94px;
+}
+
+.content-tile.radt.grey-bg{
+  padding-bottom: 81px;
 }
 
 .list.icon-icons_smiley1:before{
@@ -303,6 +330,18 @@ p.temp_hist{
   padding-bottom: 100px;
 }
 
+.content-tile.light-blue-bg.ikk{
+  padding-bottom: 82px;
+}
+
+.content-tile.grey-bg.histor{
+  padding-bottom: 81px;
+}
+
+.content-tile.dark-grey-bg.wth{
+  padding-bottom: 81px;
+}
+
 p.rad_text{
   font-size: 20px;
 }
@@ -315,13 +354,13 @@ p.windows{
   font-size: 20px;
 }
 
-p.building{
+p.building_ico{
   padding-bottom: 30px;
   font-size: 20px;
 }
 
 .content-tile.building-bg{
-  padding-bottom: 50px;
+  padding-bottom: 60px;
 }
 
 p.alerts{
