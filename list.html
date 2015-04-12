@@ -1,53 +1,32 @@
 
 <div class="container-fluid" class="">
-  <h3>List {{activelist}}</h3>
-    <div id="stage-2" class="row">
-      <div class="content-tile col-sm-12 col-md-12 purple-bg minus_b">
+    <div class="row">
+    <div ng-repeat="listdata in data">
+      <!--<div class="content-tile col-sm-12 col-md-12 purple-bg minus_b">
          <div class="minus-button"><img src="images/minus_button.svg" alt=""></div>
-      </div>
-      <div class="content-tile col-sm-6 col-md-4 purple-bg list-view text-center" ng-repeat="listdata in data">  
+      </div>-->
+      <div class="content-tile col-sm-6 col-md-4 purple-bg list-view text-center" ng-show="activelist==1">  
         <span class="list icon icon-icons_thermometer2"></span>  
-        <div class="t_info">
-          <p class="ap_number">Ap. 26</p>
+        <div class="t_info" >
+          <p class="ap_number">{{listdata.apartmentName}}</p>
           <p class="t_indoors text-uppercase">Temperature indoors</p>
-          <p class="t_indoors_val">21°</p> 
+          <p class="t_indoors_val">{{listdata.insideTemperature}}°</p> 
         </div>
-        <!--<span id="temp-list" class="temp-list">
-          Apartment id:  {{listdata.id}}          
-        </span>
-        <span id="temp-list" class="temp-list">
-           Apartment name: {{listdata.apartmentName}}          
-        </span>
-        <span id="temp-list" class="temp-list" ng-show="activelist==2">
-          Inside temperature: {{listdata.insideTemperature}}          
-        </span>        
-        <span id="temp-list" class="temp-list" ng-show="activelist==2">
-          Is the inside temperature above, below or average: {{listdata.getInsideTemperatureComparison}}          
-        </span>
-        <span id="temp-list" class="temp-list" ng-show="activelist==3">
-          Radiator temperature: {{listdata.radiatorTemperature}}          
-        </span>
-        <span id="temp-list" class="temp-list" ng-show="activelist==4">
-          Is the radiator tempersture above, below or average: {{listdata.getRadiatorTemperatureComparison}}          
-        </span>
-        <span id="temp-list" class="temp-list" ng-show="activelist==1">
-          emoticon: {{listdata.emoticon}}
-        </span>   
-        <span id="temp-list" class="temp-list" ng-show="activelist==5">
-           alert: {{listdata.alert}}
-        </span>-->
+
       </div>
-      <div class="content-tile col-sm-6 col-md-4 dark-grey-bg list-view">
-        <p class="ap_number">Ap. 9</p>
-        <span class="list icon icon-icons_smiley1"></span>
+      <div class="content-tile col-sm-6 col-md-4 dark-grey-bg list-view" ng-show="activelist==3">
+        <p class="ap_number">{{listdata.apartmentName}}</p>
+        <span class="icon icon-icons_smiley1" ng-if="data[0].emoticon=='1'"></span>
+        <span class="icon icon-icons_smiley0" ng-if="data[0].emoticon=='0'"></span>
       </div>
-      <div class="content-tile col-sm-6 col-md-4 grey-bg list-view text-center">
+      <div class="content-tile col-sm-6 col-md-4 grey-bg list-view text-center" ng-show="activelist==2">
         <span class="list icon icon-icons_radiator"></span>  
         <div class="t_info">
-          <p class="ap_number">Ap. 26</p>
+          <p class="ap_number">{{listdata.apartmentName}}</p>
           <p class="t_indoors text-uppercase">Radiator temperature</p>
-          <p class="t_indoors_val">21°</p> 
+          <p class="t_indoors_val">{{listdata.radiatorTemperature}}°</p> 
         </div>
       </div>
+  </div>
   </div>
 </div>

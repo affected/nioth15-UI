@@ -77,6 +77,11 @@
   color: #6dc28c;
   font-size: 80px;
 }
+.icon-icons_smiley0:before {
+  content: "\e613";
+  color: #6dc28c;
+  font-size: 80px;
+}
 
 .icon-icons_thermometer2:before{
   content: "\e610";
