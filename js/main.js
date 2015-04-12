@@ -1,6 +1,7 @@
 
 $(document).ready(function() {
-  $('.content-tile').matchHeight();
+  setTimeout(function(){ $('.content-tile').matchHeight(); }, 200);
+  
  //testTemps();
 });
 
@@ -23,7 +24,7 @@ $(document).ready(function() {
       }).appendTo( "#temp-list" );
     }); 
   }
-
+/*
 $(function() {
   $('a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -37,4 +38,4 @@ $(function() {
       }
     }
   });
-});
+});*/

@@ -3,6 +3,7 @@ var tweetHeatControllers = angular.module('tweetHeatControllers', []);
 
 tweetHeatControllers.controller('loginCtrl', ['$scope',  '$http', '$rootScope', 'serverpoller', '$interval', function($scope,$http,$rootScope,serverpoller,$interval) {
  
+ 
   $scope.getRole = function() {
       return $rootScope.userrole;
   };
@@ -21,6 +22,8 @@ tweetHeatControllers.controller('loginCtrl', ['$scope',  '$http', '$rootScope', 
 
 tweetHeatControllers.controller('tenantCtrl', ['$scope', '$http', '$location', '$rootScope', 'serverpoller', 'weatherprovider', function($scope, $http, $location, $rootScope, serverpoller, weatherprovider) {
 
+  $('.content-tile').matchHeight();
+
   $scope.$watch(function() {
     $scope.data = serverpoller.serverdata; 
     $scope.weatherdata = weatherprovider.weatherdata;
@@ -35,6 +38,7 @@ tweetHeatControllers.controller('tenantCtrl', ['$scope', '$http', '$location', '
 
 tweetHeatControllers.controller('overviewCtrl', ['$scope', '$http', '$rootScope', '$location', 'serverpoller', 'weatherprovider', function($scope, $http, $rootScope, $location, serverpoller, weatherprovider) {
  
+  $('.content-tile').matchHeight();
 
   $scope.$watch(function() {
     $scope.activelist = $rootScope.activelist;

@@ -25,8 +25,8 @@
       <!--<a href="#/list/{{data.notifications.latest.id}}">Count: {{data.notifications.amount}} Latest {{data.notifications.latest.message}}</a>-->
     </div>  
     <div class="content-tile col-sm-6 col-md-4 dark-blue-bg text-center alrt">
-      <div class="plus-button"><img src="images/plus_button.svg" alt=""></div>
-      <p class="temp text-uppercase alert_text">Alerts</p>
+      <!--<div class="plus-button"><img src="images/plus_button.svg" alt=""></div>-->
+      <p class="temp text-uppercase alert_text">Alerts <br><span>{{data[0].alert}}</span></p>
       <img src="images/alert_icon.svg" alt=""> 
       <span class="nb_alerts adm" ng-if="data[0].alert">1</span>
       <span class="nb_alerts adm" ng-if="!data[0].alert">0</span>   

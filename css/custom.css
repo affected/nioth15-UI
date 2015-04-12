@@ -434,7 +434,7 @@ a, a:hover {
   text-decoration: none;
 }
 .navbar-brand {
-  min-width: 90%;
+  min-width: 100%;
   display: inline-block;
   padding-bottom: 50px;
 }
