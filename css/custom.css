@@ -142,6 +142,9 @@ p.ap_info_housing{
   margin: 0 auto;
 }
 
+.content-tile.ap_smil{
+  padding-bottom: 79px;
+}
 p.building{
   font-size: 23px;
   padding-bottom: 17px;
@@ -314,6 +317,12 @@ p.temp_hist{
   float: right;
   padding-right: 50px;
 }
+
+.list.icon-icons_smiley0:before{
+  float: right;
+  padding-right: 50px;
+}
+
 .list.icon-icons_thermometer2:before{
   color: #fff;
   font-size: 95px;
